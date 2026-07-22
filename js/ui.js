@@ -17,7 +17,6 @@ class UI {
     this.renderBuildings();
     this.renderUpgrades();
     this.updateUI(true);
-    this.game.onIncome(amount => this.spawnFloatingText(amount));
     this.game.onOfflineReport((earned, effective, seconds) => this.showOfflineReport(earned, effective, seconds));
     this.game.handleOfflineEarnings();
     requestAnimationFrame(() => this.loop());
@@ -91,7 +90,7 @@ class UI {
     const money = this.game.state.money;
     const totalPop = this.game.state.totalOrangePop;
     const pps = this.game.popPerSecond;
-    this.animateValue(this.moneyValue, this.currentMoneyDisplay, money, '$');
+    this.moneyValue.textContent = `$${formatNumber(money)}`;
     this.animateValue(this.popCounter, this.currentPopDisplay, totalPop);
     this.ppsValue.textContent = formatNumber(pps) + '/s';
     this.currentMoneyDisplay = money;
