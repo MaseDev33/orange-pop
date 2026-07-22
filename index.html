@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orange Pop Empire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <div class="top-bar card-soft">
+      <div class="brand">
+        <div class="logo-icon">🍊</div>
+        <div>
+          <p class="label">Orange Pop Empire</p>
+          <p class="subtext">Build the world's brightest soda brand.</p>
+        </div>
+      </div>
+      <div class="top-metrics">
+        <div class="metric">
+          <span class="metric-label">Money</span>
+          <span id="moneyValue" class="metric-value">$0</span>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Orange Pop / sec</span>
+          <span id="ppsValue" class="metric-value">0</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="hero-card card-soft">
+        <div class="hero-copy">
+          <p class="eyebrow">Refreshing idle fun</p>
+          <h1>Orange Pop</h1>
+          <p class="hero-text">Watch your citrus soda empire bloom. Buy more stands, scale production, and build the biggest Orange Pop company in the world.</p>
+        </div>
+        <div class="hero-counter">
+          <p class="counter-label">Total Orange Pop</p>
+          <p id="popCounter" class="counter-value">0</p>
+        </div>
+      </section>
+
+      <section class="cards-grid" id="buildingGrid" aria-label="Buildings"></section>
+    </main>
+  </div>
+
+  <div class="floating-layer" id="floatingLayer"></div>
+
+  <script type="module" src="js/data.js"></script>
+  <script type="module" src="js/game.js"></script>
+  <script type="module" src="js/ui.js"></script>
+</body>
+</html>
